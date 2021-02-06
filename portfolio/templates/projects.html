@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %}Andrew - Projects{% endblock title_block %}
+    
+{% block body_block %}
+<h1 class="display-3 text-center">Projects</h1>
+<div class="row justify-content-center">
+    <div class="card col-4 myCard">
+        <img src="{% static 'portfolio/images/discord-bots.png' %}" class="card-img-top" alt="#">
+        <div class="card-body">
+            <h5 class="card-title">Discord Chat Bot</h5>
+            <p class="card-text">This is a simple discord bot made using Python and the discord.py library. Features music, on join greetings, and message responses.</p>
+            <a href="https://github.com/Alorbieski91/CompaBot" target="_blank" class="btn btn-danger myButton">Github</a>
+        </div>
+    </div>
+    <div class="card col-4 myCard">
+        <img src="{% static 'portfolio/images/social.jpg' %}" class="card-img-top" alt="#">
+        <div class="card-body">
+            <h5 class="card-title">Social Media Clone</h5>
+            <p class="card-text">This is a social media clone I coded along with an Udemy course by Jose Portilla. This base was great practice for my ability to make improvements.</p>
+            <a href="https://github.com/Alorbieski91/Practice_Social" target="_blank" class="btn btn-danger myButton">Github</a>
+            <a href="https://libro-de-mijos.herokuapp.com/" class="btn btn-danger myButton" target="_blank">View Site</a>
+        </div>
+    </div>
+    <div class="card col-4 myCard">
+        <img src="{% static 'portfolio/images/ecom.jpg' %}" class="card-img-top" alt="#">
+        <div class="card-body">
+            <h5 class="card-title">Ecommerce Site</h5>
+            <p class="card-text">A basic Ecommerce site coded along from a Youtube tutorial by Dennis Ivy. Features Guest checkout and Paypal integration.</p>
+            <a href="#" class="btn btn-danger myButton">Github</a>
+        </div>
+    </div>
+</div>
+{% endblock body_block %}

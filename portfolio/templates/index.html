@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_block %}
+<h1 class="display-3 text-center">Welcome to my Portfolio!</h1>
+<div class="row">
+    <img src="{% static 'portfolio/images/resumepic.jpg' %}" class="myResumePic col-md-6 mx-auto mb-2" alt="Profile Pic">
+    <div class="col-md-6">
+        {% lorem 2 p %}
+    </div>
+</div>
+<div class="text-center">{% lorem 3 p %}</div>
+{% endblock body_block %}
+    

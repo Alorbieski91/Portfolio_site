@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_block %}Andrew - About{% endblock title_block %}
+    
+{% block body_block %}
+<h1 class="display-3 text-center">About Me</h1>
+<div class="text-center">
+    {% lorem 5 p %}
+</div>
+<h1 class="display-3 text-center">My Course Completions</h1>
+<div class="row">
+    <img class="col-lg-4 certPic" src="{% static 'portfolio/images/pythoncert.jpg' %}" alt="">
+    <img class="col-lg-4 certPic" src="{% static 'portfolio/images/djangocert.jpg' %}" alt="">
+    <img class="col-lg-4 certPic" src="{% static 'portfolio/images/gitcert.jpg' %}" alt="">
+</div>
+{% endblock body_block %}
