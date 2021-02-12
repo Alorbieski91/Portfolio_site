@@ -1,7 +1,13 @@
+import os
+
 from django.shortcuts import render
 from django.views.generic import TemplateView, FormView
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
+from django.conf import settings
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 
 from .forms import ContactForm
 
@@ -28,9 +34,10 @@ class ContactMeView(FormView):
     def send_email(self, valid_data):
         subject = valid_data['subject']
         your_email = valid_data['your_email']
-        message = valid_data['message']
+        message = valid_data['your_email'] + '\n'*2 + valid_data['message']
+
         
-        send_mail(subject, your_email, message, ['andrew.lorbieski@gmail.com'])
+        send_mail(subject, message, your_email, [os.environ.get('EMAIL_HOST_USER')])
 
         print('Email sent')
 
